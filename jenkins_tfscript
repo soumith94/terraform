@@ -1,0 +1,15 @@
+pipeline {
+    agent {
+    label 'ec2'
+          }
+    stages {
+        stage("checking terraform installation") {
+            steps { 
+               
+                
+               sh "terraform --version"
+                
+            }
+        }
+    }
+ }
